@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CS2 HUB - Home (Assignment 5)</title>
+
+<!-- Bootstrap 5.3 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">CS2 HUB</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="matches.html">Matches</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#teams">Teams</a>
+            </li>
+            <!-- Day/Night Toggle Button -->
+            <li class="nav-item ms-lg-2">
+                <button type="button" id="themeToggleBtn" class="btn btn-outline-light btn-sm">🌙 Night Mode</button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-primary btn-sm ms-lg-3 my-2 my-lg-0" data-popup-open>Subscribe</button>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-section py-5">
+<div class="container text-center">
+    <h1 class="hero-title fw-bold">Counter-Strike 2</h1>
+    <p class="hero-text lead mt-3">
+        Welcome to CS2 HUB. Explore professional teams, players, matches and competitive Counter-Strike 2.
+    </p>
+    <div class="btn-group mt-4" role="group" aria-label="Main actions">
+        <a href="matches.html" class="btn btn-primary btn-lg btn-animate">View Matches</a>
+        <a href="gallery.html" class="btn btn-outline-light btn-lg btn-animate">Gallery</a>
+    </div>
+</div>
+</header>
+
+<!-- CS2 FACT / QUOTE GENERATOR (Part 1. Dynamic Content Fetch) -->
+<section class="container py-4">
+    <div class="card shadow-sm p-4 text-center">
+        <h3 class="h5 fw-bold mb-3">CS2 Fact &amp; Quote Generator</h3>
+        <p id="cs2QuoteText" class="lead text-muted">Click the button below to display a random CS2 pro scene fact!</p>
+        <div>
+            <button id="fetchQuoteBtn" class="btn btn-dark btn-animate">Generate CS2 Fact</button>
+        </div>
+    </div>
+</section>
+
+<!-- RESPONSIVE TYPOGRAPHY -->
+<section class="container py-5">
+<div class="row g-4">
+    <div class="col-12 col-lg-6">
+        <h2 class="section-title">Responsive Typography</h2>
+        <p class="responsive-text">
+            This section demonstrates responsive typography. The font size changes depending on screen width. On mobile devices the text becomes smaller, on tablets it becomes medium-sized, and on desktop screens it becomes larger.
+        </p>
+    </div>
+    <div class="col-12 col-lg-6">
+        <div class="info-box p-4 h-100">
+            <h3>CS2 Competitive Scene</h3>
+            <p class="mb-0">
+                Counter-Strike 2 is a tactical first-person shooter where top professional teams compete in global tournaments.
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- FEATURED PLAYERS (With Rating Stars & Read More) -->
+<section class="container py-5">
+<h2 class="section-title text-center mb-4">Featured Players</h2>
+<div class="custom-card-container">
+
+    <!-- CARD 1 -->
+    <article class="custom-card">
+        <img src="images/monesy.jpg" alt="m0NESY player" class="custom-card-image">
+        <div class="custom-card-content">
+            <h3>monesy</h3>
+            <div class="star-rating mb-2" data-rating="0">
+                <span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span>
+            </div>
+            <p>A professional Counter-Strike player known for his AWPing skills.</p>
+            <button class="btn btn-outline-secondary btn-sm btn-read-more mb-2">Read More</button>
+            <div class="extra-content">
+                <p>m0NESY joined G2 Esports and quickly established himself as one of the most clutch players in CS2 history.</p>
+            </div>
+            <div>
+                <a href="gallery.html" class="btn btn-primary btn-sm btn-animate">View Gallery</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="custom-card">
+        <img src="images/tn1r.jpg" alt="NiKo player" class="custom-card-image">
+        <div class="custom-card-content">
+            <h3>NiKo</h3>
+            <div class="star-rating mb-2" data-rating="0">
+                <span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span>
+            </div>
+            <p>An experienced professional player known for mechanical rifle precision.</p>
+            <button class="btn btn-outline-secondary btn-sm btn-read-more mb-2">Read More</button>
+            <div class="extra-content">
+                <p>NiKo has played for FaZe Clan and G2 Esports, consistently ranking among the top riflers in the world.</p>
+            </div>
+            <div>
+                <a href="gallery.html" class="btn btn-primary btn-sm btn-animate">View Gallery</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="custom-card">
+        <img src="images/molodoy.jpg" alt="donk player" class="custom-card-image">
+        <div class="custom-card-content">
+            <h3>molodoy / donk</h3>
+            <div class="star-rating mb-2" data-rating="0">
+                <span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span>
+            </div>
+            <p>A young prodigy player who dominates modern CS2 entry fragging.</p>
+            <button class="btn btn-outline-secondary btn-sm btn-read-more mb-2">Read More</button>
+            <div class="extra-content">
+                <p>Donk won IEM Katowice 2024 with Team Spirit, earning MVP honors at just 17 years old.</p>
+            </div>
+            <div>
+                <a href="gallery.html" class="btn btn-primary btn-sm btn-animate">View Gallery</a>
+            </div>
+        </div>
+    </article>
+
+</div>
+</section>
+
+<!-- BOOTSTRAP GRID -->
+<section id="teams" class="container-fluid bg-light py-5">
+<div class="container">
+    <h2 class="section-title text-center mb-5">Professional Teams</h2>
+
+    <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="images/navi.jpg" class="card-img-top" alt="NAVI team">
+                <div class="card-body">
+                    <h3 class="card-title">NAVI</h3>
+                    <p class="card-text">Natus Vincere, a world-class organization in CS2.</p>
+                    <a href="gallery.html" class="btn btn-outline-primary btn-sm">Team Gallery</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="images/spirit.jpg" class="card-img-top" alt="Spirit team">
+                <div class="card-body">
+                    <h3 class="card-title">Spirit</h3>
+                    <p class="card-text">Team Spirit, known for aggressive young talent.</p>
+                    <a href="gallery.html" class="btn btn-outline-primary btn-sm">Team Gallery</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="images/vitality.jpg" class="card-img-top" alt="Vitality team">
+                <div class="card-body">
+                    <h3 class="card-title">Vitality</h3>
+                    <p class="card-text">French-international powerhouse squad.</p>
+                    <a href="gallery.html" class="btn btn-outline-primary btn-sm">Team Gallery</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- TASK 2: ACCORDION (FAQ) -->
+<section class="container py-5">
+<h2 class="section-title text-center mb-4">Frequently Asked Questions</h2>
+<div class="row justify-content-center">
+<div class="col-12 col-lg-8">
+    <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false" type="button">
+            What is CS2 HUB?<span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-collapse"><div class="accordion-content">
+            <p>CS2 HUB is an interactive portal for Counter-Strike 2 teams, players, and match stats.</p>
+        </div></div>
+    </div>
+    <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false" type="button">
+            Is the site free to use?<span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-collapse"><div class="accordion-content">
+            <p>Yes. All features, gallery views, and match statistics are free.</p>
+        </div></div>
+    </div>
+    <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false" type="button">
+            Who built this website?<span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-collapse"><div class="accordion-content">
+            <p>Created by Zhalgasbayev Yesset and Zhandos Nurgizat for Assignment 5.</p>
+        </div></div>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- DATE/TIME & COLOR -->
+<section class="container py-5">
+<div class="row g-4 justify-content-center">
+    <div class="col-12 col-md-6">
+        <div class="card shadow-sm h-100">
+            <div class="card-body text-center p-4">
+                <h2 class="card-title h4">Change Background</h2>
+                <p class="card-text">Click to cycle through color themes.</p>
+                <button id="colorButton" type="button" class="btn btn-dark btn-animate">Change Color</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="card shadow-sm h-100">
+            <div class="card-body text-center p-4">
+                <h2 class="card-title h4">Current Date and Time</h2>
+                <p id="datetime" class="datetime-box mt-3 mb-0">Loading...</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- POPUP MODAL -->
+<div id="subscribePopup" class="popup-overlay" aria-hidden="true">
+    <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+        <button type="button" class="popup-close" data-popup-close aria-label="Close">&times;</button>
+        <h2 id="popupTitle" class="h4 fw-bold mb-3">Subscribe to CS2 HUB</h2>
+        <form id="subscribeForm" data-validate novalidate>
+            <div class="mb-3">
+                <label for="subName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="subName" name="subName" required>
+                <div class="error-text" data-error-for="subName"></div>
+            </div>
+            <div class="mb-3">
+                <label for="subEmail" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="subEmail" name="subEmail" required>
+                <div class="error-text" data-error-for="subEmail"></div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password (min. 8 characters)</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+                <div class="error-text" data-error-for="password"></div>
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                <div class="error-text" data-error-for="confirmPassword"></div>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="subAgreement" name="subAgreement" required>
+                <label class="form-check-label" for="subAgreement">I agree to receive updates.</label>
+                <div class="error-text" data-error-for="subAgreement"></div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 btn-animate">Subscribe</button>
+            <div class="form-status mt-3" aria-live="polite"></div>
+        </form>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-4">
+<div class="container">
+    <p class="mb-1">CS2 HUB</p>
+    <p class="mb-0">Assignment #5 — Advanced JavaScript &amp; DOM</p>
+    <p class="small mt-2 mb-0">Team members: Zhalgasbayev Yesset and Zhandos Nurgizat</p>
+</div>
+</footer>
+
+<!-- JS SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/keyboard-nav.js"></script>
+<script src="js/rating.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/color.js"></script>
+<script src="js/datetime.js"></script>
+</body>
+</html>
